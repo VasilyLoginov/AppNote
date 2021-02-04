@@ -1,12 +1,11 @@
 package Android.Kotlin.appnote.data.model
 
+//import java.util.Collections.singletonList
+
 object Repository {
-
-
     private val notes: List<Note>
-
     init {
-        notes= listOf(Note( "Моя первая заметка" ,
+        notes = listOf(Note( "Моя первая заметка" ,
             "Kotlin очень краткий, но при этом выразительный язык" ,
             0xfff06292 .toInt()),
             Note( "Моя первая заметка" ,
@@ -20,19 +19,20 @@ object Repository {
                 0xff4db6ac .toInt()),
             Note( "Моя первая заметка" ,
                 "Kotlin очень краткий, но при этом выразительный язык" ,
+                0xff4db6ac .toInt()),
+            Note( "Моя первая заметка" ,
+                "Kotlin очень краткий, но при этом выразительный язык" ,
                 0xffb2ff59 .toInt()),
             Note( "Моя первая заметка" ,
                 "Kotlin очень краткий, но при этом выразительный язык" ,
                 0xffffeb3b .toInt()),
             Note( "Моя первая заметка" ,
                 "Kotlin очень краткий, но при этом выразительный язык" ,
-                0xffff6e40 .toInt()))
+                0xffff6e40 .toInt()),
+            Note( "Моя первая заметка" ,
+                "Kotlin очень краткий, но при этом выразительный язык" ,
+                0xffff6e40 .toInt()),)
     }
-
-    fun getNotes(): List<Note>{
-        return notes
-    }
-
-
-
+    fun getNotes(): List<Note> = notes
 }
+
