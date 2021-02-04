@@ -23,7 +23,7 @@ class MainAdapter:RecyclerView.Adapter<NoteViewHolder>() {
 
     override fun getItemCount()= notes.size
 
-    override fun onBindViewHolder(holder: NoteViewHolder, position: Int) : Unit {
+    override fun onBindViewHolder(holder: NoteViewHolder, position: Int){
         holder.bind(notes[position])
     }
 }
