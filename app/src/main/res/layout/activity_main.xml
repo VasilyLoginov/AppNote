@@ -14,7 +14,7 @@
             android:layout_height="?attr/actionBarSize"
             android:layout_width="match_parent"
             app:title ="GeekBrains Notes"
-            app:layout_scrollFlags ="scroll|enterAlways" />
+            app:layout_scrollFlags ="scroll|enterAlways"/>
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -22,9 +22,26 @@
         android:id="@+id/mainRecycler"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layoutManager='androidx.recyclerview.widget.LinearLayoutManager'
+        app:layoutManager='androidx.recyclerview.widget.GridLayoutManager'
         app:spanCount="2"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
         tools:listitem="@layout/item_note" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id ="@+id/fab"
+        android:layout_height ="wrap_content"
+        android:layout_width ="wrap_content"
+        android:clickable="true"
+        app:srcCompat="@android:drawable/ic_menu_add"
+        app:fabSize ="normal"
+        android:layout_marginEnd ="18dp"
+        android:layout_marginBottom ="10dp"
+        app:layout_anchorGravity ="bottom|end"
+        app:layout_anchor ="@id/mainRecycler"
+        app:layout_behavior =".ui.main.FABBehavior"
+        android:contentDescription="Add new note"/>
+
+    />
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
